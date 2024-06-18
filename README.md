@@ -13,7 +13,6 @@ Welcome to the "JavaScript Introduction for Testers: Foundation for Postman API 
 ### Lesson 1.2: Setting Up the Environment
 - Installing Node.js
 - Setting up a code editor (VS Code)
-- Introduction to browser developer tools
 
 ## Module 2: JavaScript Fundamentals
 ### Lesson 2.1: Syntax and Variables
