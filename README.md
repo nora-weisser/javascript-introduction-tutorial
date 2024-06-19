@@ -25,16 +25,10 @@ Welcome to the "JavaScript Introduction for Testers: Foundation for Postman API 
 - Loops (for, while, do-while)
 - Error handling (try, catch, finally)
 
-## Module 3: Functions and Scope
-### Lesson 3.1: Functions
+## Module 3: Functions
 - Function declarations and expressions
 - Arrow functions
 - Parameters and return values
-
-### Lesson 3.2: Scope and Closures
-- Global vs. local scope
-- Function scope and block scope
-- Closures and their practical use
 
 ## Module 4: Common Test Scripts in Postman
 - Introduction to Postman Tests
