@@ -49,6 +49,20 @@ if (age >= 18) {
 }
 ```
 
+### else if
+
+Use the else if statement to specify a new condition if the first condition is false.
+
+```javascript
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+```
+
 ### switch
 
 The switch statement evaluates an expression and executes code blocks based on the matching case.
