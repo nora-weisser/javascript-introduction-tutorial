@@ -193,3 +193,6 @@ pm.test("Response schema validation", function () {
     pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;
 });
 ```
+
+Documentation:
+1. https://www.chaijs.com/api/bdd/ - assertions using Chai.js library
