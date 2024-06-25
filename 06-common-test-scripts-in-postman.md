@@ -31,6 +31,13 @@ pm.test("Status code is 200", function () {
 ```
 
 ## 3. Common Test Validations
+
+### Parse response body data
+
+```javascript
+const responseJson = pm.response.json();
+```
+
 ### Status Code Validation
 Checking for Specific Status Codes
 You can validate that the API returns the expected status code.
@@ -77,6 +84,49 @@ pm.test("Header is present in the response", function () {
 });
 ```
 
+### Test cookies
+
+```javascript
+pm.test("Cookie isLoggedIn is present", () => {
+  pm.expect(pm.cookies.has('isLoggedIn')).to.be.true;
+});
+```
+
+### Assert that the value in a set
+
+```javascript
+/* Response has the following structure:
+{
+  "type": "Subscriber"
+},
+*/
+
+pm.test("Value is in valid list", () => {
+  pm.expect(pm.response.json().type)
+    .to.be.oneOf(["Subscriber", "Customer", "User"]);
+});
+```
+
+### Assert that an object is contained
+
+```javascript
+/* Response has the following structure:
+{
+  "id": "d8893057-3e91-4cdd-a36f-a0af460b6373",
+  "created": true,
+  "errors": []
+},
+*/
+
+pm.test("Object is contained", () => {
+  const expectedObject = {
+    "created": true,
+    "errors": []
+  };
+  pm.expect(pm.response.json()).to.deep.include(expectedObject);
+});
+```
+
 ### Chaining Tests
 
 ```javascript
@@ -101,6 +151,14 @@ pm.test("Dynamic data validation", function () {
 ```javascript
 var jsonData = pm.response.json();
 pm.environment.set("companyIdToDelete", jsonData.data._id);
+```
+
+### Assert a current environment
+
+```javascript
+pm.test("Check the active environment", () => {
+  pm.expect(pm.environment.name).to.eql("Production");
+});
 ```
 
 ### Retrieve the current Value of the Variable
