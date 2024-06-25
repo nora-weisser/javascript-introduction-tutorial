@@ -196,3 +196,5 @@ pm.test("Response schema validation", function () {
 
 Documentation:
 1. https://www.chaijs.com/api/bdd/ - assertions using Chai.js library
+2. https://json-schema.org/learn/getting-started-step-by-step - JSON Schema Docs
+3. https://www.chaijs.com/api/bdd/ - Chai.js library
